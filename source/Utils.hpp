@@ -352,7 +352,7 @@ static int xfer_callback(void *clientp, curl_off_t dltotal, curl_off_t dlnow,
 // 定位到国内下载源 下载服务由 nswiki.cn 提供
 std::array sources = {
 	std::pair<const char*, const char*>("https://download.nswiki.cn/scy/FPSLocker-Warehouse/", ""),
-	std::pair<const char*, const char*>("https://dl.awa.cool/scy/FPSLocker-Warehouse/", "")
+	std::pair<const char*, const char*>("https://download.nswiki.cn/scy/FPSLocker-Warehouse/", "")
 };
 
 void sendConfirmation(Result temp_error_code) {

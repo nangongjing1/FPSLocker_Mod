@@ -122,25 +122,7 @@ std::string overlayName = "sdmc:/switch/.overlays/";
 
 LEvent threadexit = {0};
 
-/// ApplicationControlDataCondition
-typedef struct {
-    u8 type[8];                                                                          ///< Type
-    struct {
-        u8 priority;                                                                     ///< Priority
-        u8 reserved_x1[0x7];                                                             ///< Reserved
-        u16 aoc_index;                                                                   ///< AocIndex
-        u8 reserved_xa[0x6];                                                             ///< Reserved
-    } data[8];
-    u8 count;                                                                            ///< Count
-} NacpApplicationControlDataCondition;
-
-typedef union {
-    NacpLanguageEntry lang[16];                                                          ///< \ref NacpLanguageEntry, use only if TitlesDataFormat == 0
-    struct {
-        u16 buffer_size;
-        u8 buffer[0x2FFE];
-    } compressed_data;                                                                   ///< ///< \ref use only if TitlesDataFormat == 1, uncompressed data matches NacpLanguageEntry[32]
-} NacpLanguageEntryData;
+// NacpApplicationControlDataCondition / NacpLanguageEntryData come from libnx <switch/nacp.h> now.
 
 /// ns ApplicationControlProperty
 typedef struct {
